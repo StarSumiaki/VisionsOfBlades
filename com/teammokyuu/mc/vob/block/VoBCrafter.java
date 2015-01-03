@@ -17,9 +17,4 @@ public class VoBCrafter extends BlockSelfLiaison {
 		return "VoBCrafter";
 	}
 
-	@Override
-	public String getBlockModelResourceName() {
-		return getRawName( );
-	}
-
 }

@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "teammokyuu_vob:blocks/VoBCrafter_top",
+        "down": "teammokyuu_vob:blocks/VoBCrafter_bottom",
+        "up": "teammokyuu_vob:blocks/VoBCrafter_top",
+        "north": "teammokyuu_vob:blocks/VoBCrafter_side",
+        "east": "teammokyuu_vob:blocks/VoBCrafter_side",
+        "south": "teammokyuu_vob:blocks/VoBCrafter_side",
+        "west": "teammokyuu_vob:blocks/VoBCrafter_side"
+    }
+}

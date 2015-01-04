@@ -72,9 +72,27 @@ public abstract class BlockSelfLiaison extends Block {
 	
 	/**
 	 * Returns the name used for the JSON files for models/states
-	 * @return
 	 */
 	public String getBlockModelResourceName( ) {
 		return this.getRawName( );
+	}
+	
+	/**
+	 * Returns whether or not this is a standard cube (full and opaque)
+	 */
+	public boolean isStandardCube( ) {
+		return false;
+	}
+	
+	/* ----- BEGIN Block ----- */
+	
+	@Override
+	public final boolean isFullCube( ) {
+		return this.isStandardCube( );
+	}
+
+	@Override
+	public final boolean isOpaqueCube( ) {
+		return this.isStandardCube( );
 	}
 }

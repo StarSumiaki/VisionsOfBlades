@@ -12,15 +12,9 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
 public abstract class BlockSelfLiaison extends Block {
-
-	/**
-	 * A static singleton reference to the block itself.
-	 */
-	public static BlockSelfLiaison block;
 	
 	protected BlockSelfLiaison( Material material ) {
 		super( material );
-		block = this;
 		super.setUnlocalizedName( this.getRawName( ) );
 	}
 	
@@ -29,7 +23,6 @@ public abstract class BlockSelfLiaison extends Block {
 	 */
 	final public BlockSelfLiaison registerSelf( ) {
 		GameRegistry.registerBlock( this, this.getItemBlockClass( ), this.getRawName( ), this.getItemBlockClassConstructorArgs( ) );
-		
 		return this;
 	}
 	
@@ -38,7 +31,7 @@ public abstract class BlockSelfLiaison extends Block {
 	 * 
 	 * @param side	The effective side. For purpose of stupid chaining while maintaining proper siding.
 	 */
-	final public BlockSelfLiaison registerModel( Side side ) {
+	public BlockSelfLiaison registerModel( Side side ) {
 		if( side == Side.CLIENT ) {
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(
 					Item.getItemFromBlock( this ),

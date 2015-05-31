@@ -30,6 +30,18 @@ public class Recipes {
     			},
     			new ItemStack( com.teammokyuu.mc.vob.item.Items.iron_blade )
     	) );
+    	
+    	GameRegistry.addRecipe( new ExpandedShapedRecipe(
+    			5, 5, 5, 5,
+    			new ItemStack[] {
+    					null, null, new ItemStack( Items.stick ), null, null,
+    					null, null, new ItemStack( Items.stick ), null, null,
+    					null, null, new ItemStack( Items.stick ), new ItemStack( Items.stick ), new ItemStack( Items.stick ),
+    					null, new ItemStack( Items.stick ), null, null, null,
+    					new ItemStack( Items.stick ), null, null, null, null
+    			},
+    			new ItemStack( com.teammokyuu.mc.vob.item.Items.dowsing_rod )
+    	) );
 	}
 
 }
